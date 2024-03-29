@@ -3,9 +3,9 @@
 // console.log(tinderUser)
 
 const tinderUser = {}
-// tinderUser.id = "123abc"
-// tinderUser.email = "rishusingh417@gmail.com"
-// tinderUser.contact = 78994984984
+tinderUser.id = "123abc"
+tinderUser.email = "rishusingh417@gmail.com"
+tinderUser.contact = 78994984984
 // console.log(tinderUser)
 // console.log(tinderUser["id"])
 
@@ -34,4 +34,23 @@ const obj3 = {1:"a",7:"b",8:"b"}
 const objFinal = {...obj1,...obj2,...obj3} // combining objects using separator
 // console.log(objFinal)
 
+// console.log(tinderUser)
+// console.log(Array.isArray(Object.keys(tinderUser)))
+// console.log(Object.keys(tinderUser))
+// console.log(Object.values(tinderUser))
+// console.log(Object.entries(tinderUser))
+
+
+//  destructuring of an object
+// const {email} = tinderUser
+const {email : em} = tinderUser
+console.log(em)
+
+
+// JSON 
+// {
+//     "name": "hitesh",
+//     "coursename": "js in hindi",
+//     "price": "free"
+// }
 
