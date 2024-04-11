@@ -5,7 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Third DOM Practice</title>
 </head>
-<body style="background-color: #212121; color: #fff;">
+<body style="background-color: #212121; color: #fff;" id="parent">
     
+
 </body>
+<script>    
+    const newDiv = document.createElement('div')
+    console.log(newDiv)
+    newDiv.className = 'main'
+    newDiv.setAttribute('titel','generatedTitle')
+    newDiv.style.backgroundColor = '#fff'
+    newDiv.style.color = 'blue'
+    // newDiv.innerText = "this is new Div"
+    newDiv.appendChild(document.createTextNode('this is new'))
+    document.getElementById('parent').appendChild(newDiv)
+</script>
 </html>
