@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM fourth part</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLang(langname){
+        const newLang = document.createElement('li')
+        newLang.innerText = `${langname}`
+        document.querySelector('.language').appendChild(newLang)
+    }
+
+    addLang('Python')
+    addLang('Ruby')
+
+    function addLang2(langname){
+        const newLang = document.createElement('li')
+        const lang = document.createTextNode(`${langname}`)
+        newLang.appendChild(lang)
+        document.querySelector('.language').appendChild(newLang)
+    }
+
+    addLang2('TypeScript')
+
+    // edit
+    const secondLang = document.querySelector('li:nth-child(2)')
+    // secondLang.innerText = "Java"
+    const newLi = document.createElement('li')
+    newLi.appendChild(document.createTextNode('Java'))
+    secondLang.replaceWith(newLi)
+
+
+    //remove
+    // const lang = document.querySelector('li:first-child')
+    const lang = document.querySelector('li:last-child')
+    lang.remove()
+
+</script>
+</html>
