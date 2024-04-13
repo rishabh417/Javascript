@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <h1>Rishabh Singh</h1>
+    <button id="startbtn">Start</button>
+    <button id="stopbtn">Stop</button>
+</body>
+<script>
+    const heading = document.querySelector('h1')
+    let timeoutId
+    document.querySelector('#startbtn').addEventListener('click',(e) => {
+       timeoutId = setTimeout(function(){
+        heading.innerHTML = "SetTimeOut in JS"
+        },2000)
+    })
+    document.querySelector('#stopbtn').addEventListener('click',(e) => {
+        clearTimeout(timeoutId)
+    })
+    
+</script>
+</html>
