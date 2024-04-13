@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <h1>Date in console on a regular interval</h1>
+    <button id="startbtn">Start</button>
+    <button id="stopbtn">Stop</button>
+
+</body>
+<script>
+    const startbtn = document.querySelector('#startbtn')
+    const stopbtn = document.querySelector('#stopbtn')
+
+    let intervalId
+    startbtn.addEventListener('click',() =>{
+        intervalId = setInterval(() => {
+            const date = new Date()
+            console.log(date.toLocaleTimeString())
+        }, 1000);
+        // intervalId = setInterval((str) => {
+        //     const date = new Date()
+        //     console.log(date.toLocaleTimeString(),str)
+        // }, 1000, "yes");
+    })
+    stopbtn.addEventListener('click',() => {
+        clearInterval(intervalId)
+    })
+</script>
+</html>
